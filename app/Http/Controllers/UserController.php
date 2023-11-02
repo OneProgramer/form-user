@@ -38,7 +38,7 @@ class UserController extends Controller
             'img'=>'required|max:10|string',
             'g-recaptcha-response' => ['required',function(string $attribute,mixed $value,Closure $fail){
                 $g_response = Http::asForm()->post('https://www.google.com/recaptcha/api/siteverify',[
-                    'secret'=>config('services.recaptcha.secret_key'),
+                    'secret'=>'6LcpaeUoAAAAAI3PsvuySZKdwX2LhY_AYRLbIYx4',
                     'response'=>$value
                 ]);
                 if(!$g_response->json('success')){
