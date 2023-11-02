@@ -177,10 +177,10 @@
         });
     });
 </script>
-<script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.site_key') }}"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6LcpaeUoAAAAAP-YkLMtSsd7Sf-92geaab6GJUxf"></script>
 <script>
     grecaptcha.ready(function() {
-        grecaptcha.execute("{{ config('services.recaptcha.site_key') }}", {
+        grecaptcha.execute("6LcpaeUoAAAAAP-YkLMtSsd7Sf-92geaab6GJUxf", {
             action: 'submit'
         }).then(function(token) {
             document.getElementById('token').value = token;
